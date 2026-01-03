@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAS焦虑自评量表</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SAS焦虑自评量表</h1>
+            <p class="subtitle">Self-Rating Anxiety Scale</p>
+        </header>
+
+        <section id="introduction" class="section active">
+            <div class="content">
+                <h2>量表介绍</h2>
+                <p>SAS焦虑自评量表是一种常用的心理测评工具，用于评估个体最近一周内的焦虑程度。该量表包含20个问题，每个问题有4个选项，根据您的实际感受进行选择。</p>
+                <h3>评分说明</h3>
+                <ul>
+                    <li><strong>1分</strong>：没有或很少时间</li>
+                    <li><strong>2分</strong>：少部分时间</li>
+                    <li><strong>3分</strong>：相当多时间</li>
+                    <li><strong>4分</strong>：绝大部分或全部时间</li>
+                </ul>
+                
+                <button id="start-btn" class="btn primary">开始测评</button>
+            </div>
+        </section>
+
+        <section id="questionnaire" class="section">
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+                <span class="progress-text" id="progress-text">1/20</span>
+            </div>
+            <div class="question-container">
+                <h2 id="question-number">问题 1</h2>
+                <p id="question-text" class="question-text"></p>
+                <div class="options" id="options"></div>
+            </div>
+            <div class="navigation">
+                <button id="prev-btn" class="btn secondary" disabled>上一题</button>
+                <button id="next-btn" class="btn primary">下一题</button>
+            </div>
+        </section>
+
+        <section id="results" class="section">
+            <div class="content">
+                <h2>测评结果</h2>
+                <div class="result-card">
+                    <div class="score-container">
+                        <h3>您的得分</h3>
+                        <div class="score" id="total-score"></div>
+                        <div class="score-level" id="score-level"></div>
+                    </div>
+                    <div class="analysis" id="analysis"></div>
+                    <div class="suggestions" id="suggestions"></div>
+                </div>
+                <button id="restart-btn" class="btn primary">重新测评</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
